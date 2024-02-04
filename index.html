@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- this is the url for our color pallete: https://coolors.co/palette/000e14-00111a-00141f-001824-001b29-002233-00293d-003047-003652-003d5c -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>If you're reading this, you're special</title>
+</head>
+<body>
+    <div id="overlay">
+        <div id="text">Click anywhere to continue<br>Warning: The webpage you're trying to load contains music</div>
+    </div>
+    <audio id="song" loop src="background.mp3"></audio>
+    <h1>Website is Still on Progress</h1>
+    <h2>Lyrics to this song:</h2>
+    <p>Look at me and watch me swim<br>
+        In the sea of your thoughts<br>
+        I think I like the way it's thin<br>
+        I was so lost without you<br>
+        But now I'm wondering are you lost too?<br><br>
+        
+        I was lost in the dream, but now I'm living in the real life<br>
+        And your face make-believe<br>
+        You're crying in the daylight<br><br>
+        
+        Happiness in life won't happen<br>
+        I'm still floating but I sometimes wish that I could cry<br>
+        And when I look I see anew<br>
+        Into your soul and all the things I'd hold<br><br>
+        
+        I was lost in the dream, but now I'm living in the real life<br>
+        And your face make-believe<br>
+        You're crying in the daylight<br><br>
+        
+        I was lost in the dream, but now I'm living in the real life<br>
+        And your face make-believe<br>
+        You're crying in the daylight<br>
+        I was lost in the dream, but now I'm living in the real life<br>
+        And your face make-believe<br>
+        You're crying in the daylight<br><br>
+        
+        I was lost in the dream, but now I'm living in the real life<br>
+        Your face make-believe<br>
+        You're crying in the daylight<br>
+        I was lost in the dream, but now I'm living in the real life<br>
+        Your face make-believe<br>
+        You're crying in the daylight</p>
+</body>
+</html>
+
+<script>
+    document.addEventListener("click", function() {
+        var overlay = document.getElementById("overlay");
+        overlay.style.display = "none";
+        document.getElementById("song").volume = 0.15;
+        document.getElementById("song").play();
+      });
+</script>
