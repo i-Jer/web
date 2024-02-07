@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Single+Day&family=Sixtyfour&display=swap" rel="stylesheet">
-    <title>Website is Still on Progress</title>
+    <title>Jer | Home</title>
 </head>
 <body>
     <div id="particles-js"></div>
@@ -46,13 +46,25 @@
                 <h1>Hi,<br>you can call me <blue> Jer</blue></h1>
                 <h2>Developer</h2>
                 <p>A mainly backend developer who prioritizes logic, efficiency, and crafting secure code to mitigate vulnerabilities. I've been immersed in computational thinking and logic since the age of 7, began block-based coding at 9, and transitioned to text-based coding at 12.</p>
+                <div id="project_button_container"><a class="cta" id="viewProjectsButton" href="projects.html">View My Projects</a></div>
             </div>
             <div id="projects_grid">
                 <h1><b>My Projects</b></h1>
                 <img id="projects" src="img/projects.png" alt="projects">
             </div>
         </div>
-        <script type="text/javascript" src="mobile.js"></script>
-    
+        <script type="text/javascript" src="js/mobile.js"></script>
+        <script type="text/javascript" src="js/home_mobile.js"></script>
+        <script>
+            // cursor movement effect
+            document.addEventListener('mousemove', function(e) {
+                const movingBg = document.getElementById('particles-js');
+                const xPos = (e.clientX / window.innerWidth) - 0.5;
+                const yPos = (e.clientY / window.innerHeight) - 0.5;
+                const xOffset = xPos * 50;
+                const yOffset = yPos * 50;
+                movingBg.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        </script>
 </body>
 </html>
