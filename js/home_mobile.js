@@ -23,8 +23,11 @@ function adjustLayout() {
         mainText.style.marginLeft = 'auto';
         mainText.style.marginRight = 'auto';
         h1Element.style.textAlign = 'center';
+        h1Element.style.fontSize = '50px';
         h2Element.style.textAlign = 'center';
+        h2Element.style.fontSize = '30px';
         pElement.style.textAlign = 'center';
+        pElement.style.fontSize = '15px';
         h1Element.style.marginTop = '7svh';
         h1Element.style.marginLeft = 'auto';
         h1Element.style.marginRight = 'auto';
@@ -36,7 +39,7 @@ function adjustLayout() {
         projectsImg.style.display = 'block';
         projectsImg.style.marginLeft = 'auto';
         projectsImg.style.marginRight = 'auto';
-        projectsImg.style.width = '80svw';
+        projectsImg.style.width = '95svw';
         projectButtonContainer.style.textAlign = 'center';
         projectButtonContainer.style.marginTop = '2svh';
         projectButtonContainer.style.marginLeft = 'auto';
@@ -50,8 +53,11 @@ function adjustLayout() {
         mainText.style.width = '50%';
         mainText.style.marginLeft = '0';
         h1Element.style.textAlign = 'left';
+        h1Element.style.fontSize = '65px';
         h2Element.style.textAlign = 'left';
+        h2Element.style.fontSize = '40px';
         pElement.style.textAlign = 'justify';
+        pElement.style.fontSize = '16px';
         h1Element.style.marginTop = '20svh';
         h1Element.style.marginLeft = '10svw';
         h2Element.style.marginLeft = '10svw';
