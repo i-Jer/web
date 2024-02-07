@@ -68,6 +68,7 @@ nav {
 }
 .menu {
     display: none;
+    margin-top: 0.8svh;
 }
 .overlay {
     height: 100%;
@@ -121,6 +122,9 @@ nav {
     .nav__links,
     .cta {
       display: none;
+    }
+    #project_button_container{
+        margin-left: 0;
     }
     .menu {
       display: initial;
