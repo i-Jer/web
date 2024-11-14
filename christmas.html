@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- this is the url for our color pallete: https://coolors.co/palette/000e14-00111a-00141f-001824-001b29-002233-00293d-003047-003652-003d5c -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/christmas_style.css">
+    <link rel="stylesheet" type="text/css" href="styles/nav_style.css">
+    <title>PASL CHRISTMAS EVENT</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html">Contact</a>
+        <p class="menu cta">Menu</p>
+        <img id="logo" src="img/logo.png" alt="logo">
+    </header>
+    <div id="mobile__menu" class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/mobile.js"></script>
+    <h1>Good Luck</h1>
+    <script id="gen_js">
+        function generateQRCode(data, container) {
+            const qr = new QRious({
+                element: container,
+                value: data,
+                size: 130
+            });
+        }
+
+        function generateQRCodes() {
+            const totalQRCodes = 1000;
+            const workingQRCodeIndex = Math.floor(Math.random() * totalQRCodes);
+            
+            for (let i = 0; i < totalQRCodes; i++) {
+                const wrapper = document.createElement("div");
+                wrapper.classList.add("qr-wrapper");
+
+                const container = document.createElement("canvas");
+                container.classList.add("qr-container");
+
+                const qrData = (i == workingQRCodeIndex) 
+                    ? "https://example.com/" 
+                    : `Invalid-${Math.random().toString(36).substring(2, 10)}`;
+                
+                generateQRCode(qrData, container);
+
+                const numberLabel = document.createElement("div");
+                numberLabel.classList.add("qr-number");
+                if(i == workingQRCodeIndex) numberLabel.classList.add("bld");
+                numberLabel.textContent = i + 1;
+
+                wrapper.appendChild(container);
+                wrapper.appendChild(numberLabel);
+                document.body.appendChild(wrapper);
+            }
+            console.log(workingQRCodeIndex+1);
+        }
+
+        window.onload = generateQRCodes;
+
+        var script = document.getElementById("gen_js");
+        script.remove();
+
+    </script>
+</body>
+</html>
